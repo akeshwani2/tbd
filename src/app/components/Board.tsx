@@ -134,7 +134,7 @@ function Column({ column }: { column: ColumnData }) {
       <div className="mb-3">
         <ColumnHeader label={column.label} leftIcon={column.headerIcon} />
       </div>
-      <div ref={setNodeRef} className="flex-1 overflow-y-auto min-h-6">
+      <div ref={setNodeRef} className="flex-1 overflow-y-auto min-h-6 scrollbar-hide">
         <SortableContext items={itemIds} strategy={verticalListSortingStrategy}>
           {column.cards.map((card) => (
             <SortableCard
